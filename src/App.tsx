@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
-import { func } from "prop-types";
+//import { func } from "prop-types";
 import { Authenticator } from '@aws-amplify/ui-react'
 import '@aws-amplify/ui-react/styles.css'
 
@@ -40,6 +40,7 @@ function App() {
           <li onClick={() => deleteTodo(todo.id)} key={todo.id}>{todo.content}</li>
         ))}
       </ul>
+      <button onClick={signOut}>Sign out</button>
       <div>
         🥳 App successfully hosted.
         <br />
